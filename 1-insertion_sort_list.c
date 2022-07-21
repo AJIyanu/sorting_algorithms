@@ -18,7 +18,8 @@ void swaplist(listint_t *add, listint_t **head)
 	if (temprev->prev == NULL)
 	{
 		node->prev->next = node->next;
-		node->next->prev = node->prev;
+		if (node->next != NULL)
+			node->next->prev = node->prev;
 		node->prev->prev = node;
 		node->next = node->prev;
 		node->prev = NULL;
