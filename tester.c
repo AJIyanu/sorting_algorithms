@@ -41,7 +41,7 @@ listint_t *create_listint(const int *array, size_t size)
 int main(void)
 {
     listint_t *list;
-    int array[] = {1, 2, 9, 4, 5, 6, 7, 8};
+    int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15};
     size_t n = sizeof(array) / sizeof(array[0]);
 
     list = create_listint(array, n);
@@ -49,6 +49,7 @@ int main(void)
         return (1);
     print_list(list);
     printf("\n");
+    *list = NULL;
     insertion_sort_list(&list);
     printf("\n");
     print_list(list);

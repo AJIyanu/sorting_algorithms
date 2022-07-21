@@ -47,10 +47,14 @@ void swaplist(listint_t *add, listint_t **head)
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *wemove = *list;
+	listint_t *wemove = NULL;
 	listint_t *swapadd = NULL;
 	int swap = 0;
 
+	if (list == NULL)
+		return;
+
+	wemove = *list;
 	while (wemove->next != NULL)
 	{
 		if (wemove->n > wemove->next->n)
