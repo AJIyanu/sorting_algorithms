@@ -9,9 +9,9 @@
  */
 void swaparr(int *add)
 {
-        int temp = *add;
-        *add = add[-1];
-        add[-1] = temp;
+	int temp = *add;
+	*add = add[-1];
+	add[-1] = temp;
 }
 
 
@@ -28,15 +28,18 @@ void bubble_sort(int *array, size_t size)
 	size_t newsize = size;
 	size_t i;
 	size_t n = size;
+	int swap = 1;
 
-	while(newsize > 1)
+	while (size > 1 && swap == 1)
 	{
-		for(i = 0; i < size; i++)
+		swap = 0;
+		for (i = 0; i < size; i++)
 		{
-			if(array[i] < array[i - 1])
+			if (array[i] < array[i - 1])
 			{
 				swaparr(array + i);
 				newsize = i;
+				swap = 1;
 				print_array(array, n);
 			}
 		}
