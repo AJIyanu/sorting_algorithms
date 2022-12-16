@@ -29,4 +29,5 @@ void swapper(listint_t *a, listint_t *b);
 void swaps(int *array, size_t size, int *a, int *b);
 void kwiksort(int *array, size_t size, ssize_t low, ssize_t high);
 size_t partition(int *array, size_t size, ssize_t low, ssize_t high);
+void shell_sort(int *array, size_t size);
 #endif
