@@ -1,4 +1,6 @@
 #include "sort.h"
+void heapify(int *array, int end, int start, size_t size);
+void swap(int *a, int *b);
 
 /**
  * heap_sort - Sorting array using heap sort algorithm
